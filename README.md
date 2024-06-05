@@ -30,6 +30,8 @@ That's it! You should now have the API running locally.
 
 Creates a new URL proxy.
 
+This is an authenticated endpoint and requires `?apiKey=<string>` query parameter (via .dev.vars API_KEY).
+
 #### Body
 
 ```json
@@ -55,11 +57,15 @@ Attempts to redirect to the URL associated with the given ID.
 
 This endpoint will check accessToken, expiration, and maxUses before redirecting and throw an error if any of these checks fail.
 
+If an accessToken was set on creation, it must be passed as a query parameter `?accessToken=<string>`.
+
 ### `GET /:id/info`
 
 Returns information about the URL proxy associated with the given ID.
 
 This can be useful for passing on information like maxUses or expiresAt to a user.
+
+This is an authenticated endpoint and requires `?apiKey=<string>` query parameter (via .dev.vars API_KEY).
 
 ```json
 {
