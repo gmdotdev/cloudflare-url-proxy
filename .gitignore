@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# build
+dist
+
+# wrangler
+.wrangler
+
+# misc
+.DS_Store
+
+# local env files
+.env*.local
+*.contentlayer
+
+*.react-email
